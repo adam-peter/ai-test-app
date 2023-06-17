@@ -27,8 +27,10 @@
 	});
 </script>
 
-<main class="align-center my-auto flex min-h-[100vh] min-w-[100vw] flex-col justify-end gap-2 p-4">
-	<ul class="mx-auto mb-2 h-[85vh] w-5/6 bg-slate-600 px-20 py-5">
+<main
+	class="align-center my-auto flex min-h-[100vh] min-w-[100vw] flex-col justify-end gap-2 rounded p-4"
+>
+	<ul class="mx-auto mb-2 min-h-[85vh] w-5/6 bg-slate-600 px-20 py-5">
 		<!-- messages is a store -> $messages to subscribe to it -->
 		{#each $messages as message}
 			{#if message.role === "assistant"}
@@ -40,7 +42,7 @@
 		{/each}
 	</ul>
 
-	<form on:submit={handleSubmit} class="h-2/12 mx-auto flex">
+	<form on:submit={handleSubmit} class="h-2/12 mx-auto w-full bg-slate-900 justify-center flex block p-6">
 		<input bind:value={$input} class="rounded rounded-r-none bg-slate-400 p-2 !outline-none" />
 		<button
 			type="submit"
